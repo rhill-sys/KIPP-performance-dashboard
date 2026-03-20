@@ -264,9 +264,9 @@ function updateBenchmark(f){
       labels:labels,
       datasets:[
         {label:'Region Pass Rate',data:rows.map(function(r){return r.passRate25;}),backgroundColor:COLORS.primary+'CC',borderRadius:4,barPercentage:0.7},
+        {label:'90th Pctile (SED 80%+)',data:rows.map(function(r){return r.p90_sed;}),backgroundColor:COLORS.orange+'60',borderRadius:4,barPercentage:0.7},
         {label:'50th Pctile (All)',data:rows.map(function(r){return r.p50_all;}),backgroundColor:COLORS.gray+'60',borderRadius:4,barPercentage:0.7},
-        {label:'75th Pctile (All)',data:rows.map(function(r){return r.p75_all;}),backgroundColor:COLORS.accent+'60',borderRadius:4,barPercentage:0.7},
-        {label:'90th Pctile (SED 80%+)',data:rows.map(function(r){return r.p90_sed;}),backgroundColor:COLORS.orange+'60',borderRadius:4,barPercentage:0.7}
+        {label:'75th Pctile (All)',data:rows.map(function(r){return r.p75_all;}),backgroundColor:COLORS.accent+'60',borderRadius:4,barPercentage:0.7}
       ]
     },
     options:{
